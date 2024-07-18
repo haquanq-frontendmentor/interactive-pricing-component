@@ -16,7 +16,7 @@ Thanks to fronendmentor team, this challenge gave me an opportunity to learn mor
 🐲 **What i have done**
 
 - Used my own judgement to achieve **pixel-perfect** without design files
-- Built an range slider utilized native `<input type="range">` with custom **draggable** thumb for visual users and accessibility for screen readers (tested with NVDA)
+- Built an range slider utilized native `<input type="range>` with custom **draggable** thumb for visual users and accessibility for screen readers (tested with NVDA)
 - Overridden default focus effect with outline on button, input
 
 🐦 **Things to improve**
