@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <main class="main__container">
+      <img class="main__bg-pattern" src="./assets/images/bg-pattern.svg" alt="" />
+      <div class="main__headline">
+        <img class="main__headline__circle" src="./assets/images/pattern-circles.svg" alt="" />
+        <h1 class="main__headline__title">Simple, traffic-based pricing</h1>
+        <p class="main__headline__description">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
+      <figure class="pricing">
+        <figcaption class="sr-only">Setup your pricing plan</figcaption>
+        <form class="pricing__form" id="pricing-form" action="">
+          <p class="pricing__form__pageview">100K pageviews</p>
+          <div class="pricing__form__slider">
+            <label class="slider" for="price-slider">
+              <span class="sr-only">Price</span>
+              <span class="slider__track" aria-hidden="true">
+                <span class="slider__track__inner"></span>
+                <span class="slider__thumb">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="13">
+                    <g fill="#80FFF3" fill-rule="evenodd">
+                      <path
+                        d="M16 2.558v7.884a1 1 0 001.735.679l3.639-3.943a1 1 0 000-1.356l-3.64-3.943A1 1 0 0016 2.558zM6 2.558v7.884a1 1 0 01-1.735.679L.626 7.178a1 1 0 010-1.356l3.64-3.943A1 1 0 016 2.558z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </span>
+              <input
+                class="slider__input"
+                id="price-slider"
+                type="range"
+                min="8"
+                max="36"
+                value="16"
+                aria-valuetext="16$ per month for 100k pageviews"
+              />
+            </label>
+          </div>
+          <p class="pricing__form__price" id="current-pricing">
+            <span class="pricing__form__price--value"> &dollar;16.00</span>
+            <span class="pricing__form__price--term">/ month</span>
+          </p>
+          <div class="pricing__form__switch">
+            <label class="switch">
+              <span class="sr-only">Payment periods</span>
+              <span class="sr-only" id="payment-period-description" aria-hidden="true"
+                >Choose yearly billing with 25% off</span
+              >
+              <input
+                class="switch__input"
+                type="checkbox"
+                aria-describedby="payment-period-description"
+              />
+              <span class="switch__content" aria-hidden="true">
+                <span class="switch__label switch__label--monthly">Monthly Billing</span>
+                <span class="switch__track">
+                  <span class="switch__thumb"></span>
+                </span>
+                <span class="switch__label switch__label--yearly">
+                  <span> Yearly Billing </span>
+                  <span class="switch__label--yearly-discount">
+                    <span class="mobile"> -25%</span>
+                    <span class="desktop">25% discount</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+          </div>
+        </form>
+        <div class="pricing__offer">
+          <figure class="pricing__offer__wrapper">
+            <figcaption class="sr-only">What do we offer</figcaption>
+            <ul class="pricing__offer__list" aria-label="">
+              <li class="pricing__offer__item">
+                <img
+                  class="pricing__offer__icon"
+                  src="./assets/images/icon-check.svg"
+                  alt="Check icon"
+                  aria-hidden="true"
+                />
+                <p class="pricing__offer__text">Unlimited websites</p>
+              </li>
+              <li class="pricing__offer__item">
+                <img
+                  class="pricing__offer__icon"
+                  src="./assets/images/icon-check.svg"
+                  alt="Check icon"
+                  aria-hidden="true"
+                />
+                <p class="pricing__offer__text">100% data ownership</p>
+              </li>
+              <li class="pricing__offer__item">
+                <img
+                  class="pricing__offer__icon"
+                  src="./assets/images/icon-check.svg"
+                  alt="Check icon"
+                  aria-hidden="true"
+                />
+                <p class="pricing__offer__text">Email reports</p>
+              </li>
+            </ul>
+          </figure>
+          <button class="pricing__submit-btn" form="pricing-form" type="submit">
+            <span class="pricing__submit-btn--text">Start my trial</span>
+          </button>
+        </div>
+      </figure>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
