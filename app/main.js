@@ -156,10 +156,12 @@ const priceSlider = {
         if (!this._thumbTransformOutdated) return;
         const translateX = this._calculateThumbStepWidth() * this._currentValueIndex;
 
+        const transitionDuration = noAnimate ? 0 : 300;
+
         requestAnimationFrame(() => {
-            if (!noAnimate) this._thumbElement.style.transition = `transform 300ms ease`;
+            this._thumbElement.style.transition = `transform ${transitionDuration}ms ease`;
             this._thumbElement.style.transform = `translateX(${translateX}px)`;
-            if (!noAnimate) this._trackValueElement.style.transition = `width 300ms ease`;
+            this._trackValueElement.style.transition = `width ${transitionDuration}ms ease`;
             this._trackValueElement.style.width = `${
                 ((translateX + this._thumbElement.clientWidth / 2) * 100) /
                 this._trackElement.clientWidth

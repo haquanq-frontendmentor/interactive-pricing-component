@@ -21,8 +21,8 @@ Thanks to fronendmentor team, this challenge gave me an opportunity to learn mor
 
 🐦 **Things to improve**
 
-- My JS source code is messy, i am thinking about using TypeScript next time when i came back for this challenge again
-- I need a better way to handle CSS `font` custom variables accross all components
+- My JS source code is messy, i am thinking about using TypeScript for stronger static types next time when i came back for this challenge again
+- Figure out a system to handle CSS `font` custom variables accross all components
 
 ### What challenges did you encounter, and how did you overcome them?
 
