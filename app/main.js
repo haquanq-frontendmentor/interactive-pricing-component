@@ -152,14 +152,14 @@ const priceSlider = {
         return { x, y };
     },
 
-    _updateThumbPosition() {
+    _updateThumbPosition(noAnimate) {
         if (!this._thumbTransformOutdated) return;
         const translateX = this._calculateThumbStepWidth() * this._currentValueIndex;
 
         requestAnimationFrame(() => {
-            this._thumbElement.style.transition = `transform 300ms ease`;
-            this._thumbElement.style.transform = `translateX(calc(${translateX}px))`;
-            this._trackValueElement.style.transition = `width 300ms ease`;
+            if (!noAnimate) this._thumbElement.style.transition = `transform 300ms ease`;
+            this._thumbElement.style.transform = `translateX(${translateX}px)`;
+            if (!noAnimate) this._trackValueElement.style.transition = `width 300ms ease`;
             this._trackValueElement.style.width = `${
                 ((translateX + this._thumbElement.clientWidth / 2) * 100) /
                 this._trackElement.clientWidth
@@ -328,14 +328,10 @@ const priceSlider = {
         this._thumbElementEvents.touchstart.push(this._handleThumbPull);
 
         window.addEventListener("resize", () => {
-            const translateX = this._calculateThumbStepWidth() * this._currentValueIndex;
-            requestAnimationFrame(() => {
-                this._thumbElement.style.transition = ``;
-                this._thumbElement.style.transform = `translateX(${translateX}px)`;
-            });
+            this._updateThumbPosition(true);
         });
 
-        this._updateThumbPosition();
+        this._updateThumbPosition(true);
     },
 };
 
