@@ -1,0 +1,28 @@
+@import "./base/fonts.css";
+@import "./base/variables.css";
+@import "./base/reset.css";
+
+@import "./components/intro.css";
+@import "./components/plan.css";
+@import "./components/slider.css";
+@import "./components/switch.css";
+
+@import "./utils/a11y.css";
+
+main {
+    position: relative;
+    padding-block-start: clamp(5.75rem, 8vw + 4rem, 6.8125rem);
+    padding-block-end: clamp(5.5rem, 8vw + 4rem, 8.5625rem);
+    min-height: 100vh;
+}
+
+.bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 25rem;
+    object-fit: cover;
+    pointer-events: none;
+}

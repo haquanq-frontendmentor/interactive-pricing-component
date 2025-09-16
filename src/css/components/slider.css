@@ -1,0 +1,62 @@
+.slider {
+    --thumb-size: 2.5rem;
+    --thumb-background: var(--color-cyan-300);
+    --thumb-shadow: 0 12px 16px 4px hsl(174, 86%, 45%, 30%);
+
+    --track-width: 100%;
+    --track-height: 0.5rem;
+    --track-surface: var(--color-gray-150);
+
+    --progress-surface: var(--color-cyan-100);
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: var(--thumb-size);
+    border-radius: var(--rounded-full);
+
+    &:focus-within {
+        outline-color: var(--color-cyan-300);
+        outline-offset: var(--focus-outline-offset);
+        outline-width: 2px;
+        outline-style: var(--focus-outline-style);
+    }
+
+    &__track {
+        width: var(--track-width);
+        height: var(--track-height);
+        background: var(--track-surface);
+        position: relative;
+        border-radius: inherit;
+        display: flex;
+        align-items: center;
+    }
+
+    &__progress {
+        display: block;
+        position: absolute;
+        border-radius: inherit;
+        content: "";
+        inset: 0;
+        background: var(--progress-surface);
+    }
+
+    &__thumb {
+        display: block;
+        z-index: 999;
+        cursor: pointer;
+        border-radius: var(--rounded-full);
+        width: var(--thumb-size);
+        height: var(--thumb-size);
+        background: var(--thumb-background);
+        box-shadow: var(--thumb-shadow);
+        background-image: url("../assets/images/icon-slider.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+    }
+}

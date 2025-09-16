@@ -1,0 +1,48 @@
+:root {
+    --color-cyan-100-hsl: 174, 77%, 80%;
+    --color-cyan-100: hsl(174, 77%, 80%);
+    --color-cyan-300-hsl: 174, 86%, 45%;
+    --color-cyan-300: hsl(174, 86%, 45%);
+
+    --color-cyan-400-hsl: 175, 68%, 60%;
+    --color-cyan-400: hsl(175, 68%, 50%);
+
+    --color-cyan-500-hsl: 175, 68%, 41%;
+    --color-cyan-500: hsl(175, 68%, 41%);
+
+    --color-red-100: hsl(14, 92%, 95%);
+    --color-red-300: hsl(15, 100%, 70%);
+
+    --color-white: hsl(0, 0%, 100%);
+
+    --color-gray-100: hsl(230, 100%, 99%);
+    --color-gray-150: hsl(224, 65%, 95%);
+    --color-gray-175: hsl(223, 50%, 87%);
+    --color-gray-300: hsl(226, 100%, 87%);
+    --color-gray-500: hsl(225, 20%, 60%);
+    --color-gray-900: hsl(227, 35%, 25%);
+
+    --gradien-cyan: linear-gradient(to right, hsla(var(--color-cyan-400-hsl), 1), hsla(var(--color-cyan-300-hsl), 1));
+
+    --shadow-md: 0 32px 48px -8px hsl(227, 35%, 25%, 10%);
+
+    --font-primary: "Manrope", system-ui, sans-serif;
+    --font-medium: 600;
+    --font-extrabold: 800;
+
+    --text-body: 0.8125rem; /* 13 - 15 */
+    --text-heading-1: 1.25rem;
+
+    --leading-none: 1;
+    --leading-paragraph: 1.4375rem;
+
+    --rounded-full: 9999px;
+    --rounded-base: 0.5rem;
+
+    --focus-outline-width: 3px;
+    --focus-outline-offset: 3px;
+    --focus-outline-color: var(--color-gray-900);
+    --focus-outline-style: dashed;
+}
+
+@custom-media --tablet (min-width: 36em);

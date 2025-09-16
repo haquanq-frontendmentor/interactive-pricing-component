@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <main>
+      <img class="bg-pattern" src="./assets/images/bg-pattern.svg" alt="" />
+      <div class="intro">
+        <img class="intro__circle" src="./assets/images/pattern-circles.svg" alt="" />
+        <h1 class="intro__title">Simple, traffic-based pricing</h1>
+        <p class="intro__description">Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+
+      <section class="plan">
+        <h2 class="sr-only">Choose your pricing plan</h2>
+        <form class="plan__form" id="plan-form">
+          <p class="plan__pageviews">100K pageviews</p>
+          <div class="plan__pricing-slider">
+            <label class="slider">
+              <span class="sr-only">Price</span>
+              <input
+                class="slider__input"
+                name="price"
+                type="range"
+                min="8"
+                max="36"
+                value="16"
+                aria-valuetext="16$ per month for 100k pageviews"
+              />
+              <span class="slider__track">
+                <span class="slider__progress"></span>
+                <span class="slider__thumb"> </span>
+              </span>
+            </label>
+          </div>
+          <p class="plan__pricing-label" id="current-pricing">
+            <span class="plan__pricing-label--value">&dollar;16.00</span>
+            <span class="plan__pricing-label--term">/ month</span>
+          </p>
+          <div class="plan__payment-period">
+            <label class="switch">
+              <span class="sr-only">Payment period (monthly)</span>
+              <span class="sr-only" id="payment-period-description" aria-hidden="true">
+                Choose yearly billing with 25% off
+              </span>
+              <input
+                class="switch__input"
+                id="payment-period-input"
+                name="payment-period"
+                type="checkbox"
+                aria-describedby="payment-period-description"
+              />
+              <span class="switch__content" aria-hidden="true">
+                <span class="switch__label switch__label--monthly">Monthly Billing</span>
+                <span class="switch__track">
+                  <span class="switch__thumb"></span>
+                </span>
+                <span class="switch__label switch__label--yearly">
+                  <span>Yearly Billing</span>
+                  <span class="switch__label--discount">
+                    <span class="mobile">-25%</span>
+                    <span class="desktop">25% discount</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+          </div>
+        </form>
+        <div class="plan__footer">
+          <ul class="plan__offer-list">
+            <li class="plan__offer-item">Unlimited websites</li>
+            <li class="plan__offer-item">100% data ownership</li>
+            <li class="plan__offer-item">Email reports</li>
+          </ul>
+          <button class="plan__submit-btn" type="submit" form="plan-form">
+            <span class="plan__submit-btn--text">Start my trial</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.ts"></script>
+  </body>
+</html>

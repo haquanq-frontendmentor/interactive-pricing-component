@@ -1,0 +1,30 @@
+.intro {
+    text-align: center;
+    margin-block-end: 4rem;
+    z-index: 999;
+    position: relative;
+
+    @media (--tablet) {
+        margin-block-end: 5.625rem;
+    }
+
+    &__circle {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__title {
+        color: var(--color-gray-900);
+        font-size: var(--text-heading-1);
+        margin-block-end: calc(0.5em + 0.125rem);
+        letter-spacing: 0.01em;
+    }
+
+    &__description {
+        padding-inline: 6rem;
+        line-height: var(--leading-paragraph);
+    }
+}
