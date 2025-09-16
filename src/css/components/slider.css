@@ -50,7 +50,7 @@
         height: var(--thumb-size);
         background: var(--thumb-background);
         box-shadow: var(--thumb-shadow);
-        background-image: url("../assets/images/icon-slider.svg");
+        background-image: url("/assets/images/icon-slider.svg");
         background-position: center center;
         background-repeat: no-repeat;
     }
